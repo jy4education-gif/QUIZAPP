@@ -3,7 +3,7 @@ let currentQuestionIndex = 0; // wir arbeiten später mit arrays - Screibweise h
 
 let questions = [
     { 
-        question: "Was ist die Haupstadt von Berlin?", // "," Verknüpfung mehrerer Eigenschaften
+        question: "Was ist die Haupstadt von Deutschland?", // "," Verknüpfung mehrerer Eigenschaften
         answers : ["Paris", "London", "Berlin", "Madrid"], // "[" Array 
         correctAnswer: 2 // "2" Position im Array 
     },
@@ -34,3 +34,7 @@ function displayQuestion(){
 } 
 
 displayQuestion();
+//
+//function checkAnswer(userAnswer){
+    //let correctAnswer = questions[currentQuestionIndex].correctAnswer;
+//}
