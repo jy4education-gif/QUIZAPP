@@ -1,13 +1,118 @@
 <html>
     <header>
-          <title>JavaScript Quiz</title>      
+          <title>JavaScript Quiz</title>
+          <style>
+              * {
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+              }
+              
+              body {
+                  background: linear-gradient(90deg, #11998e 0%, #ddef38 100%);
+                  min-height: 100vh;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-family: Arial, sans-serif;
+              }
+              
+              #quiz-container {
+                  background: white;
+                  padding: 40px;
+                  border-radius: 10px;
+                  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+                  max-width: 500px;
+                  width: 90%;
+              }
+              
+              #question {
+                  color: #11998e;
+                  margin-bottom: 25px;
+                  font-size: 24px;
+              }
+              
+              #answers {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+                  margin-bottom: 20px;
+              }
+              
+              #answers button {
+                  background-color: #38ef7d;
+                  color: white;
+                  padding: 12px 20px;
+                  border: none;
+                  border-radius: 5px;
+                  font-size: 16px;
+                  cursor: pointer;
+                  transition: all 0.3s ease;
+              }
+              
+              #answers button:hover {
+                  background-color: #11998e;
+                  transform: translateY(-2px);
+                  box-shadow: 0 5px 15px rgba(17, 153, 142, 0.3);
+              }
+              
+              #next-button {
+                  background-color: #11998e;
+                  color: white;
+                  padding: 12px 30px;
+                  border: none;
+                  border-radius: 5px;
+                  font-size: 16px;
+                  cursor: pointer;
+                  width: 100%;
+                  transition: all 0.3s ease;
+              }
+              
+              #next-button:hover {
+                  background-color: #38ef7d;
+                  transform: translateY(-2px);
+                  box-shadow: 0 5px 15px rgba(56, 239, 125, 0.3);
+              }
+              
+              #result {
+                  background: white;
+                  padding: 40px;
+                  border-radius: 10px;
+                  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+                  max-width: 500px;
+                  width: 90%;
+                  text-align: center;
+              }
+              
+              #result h1 {
+                  color: #11998e;
+                  margin-bottom: 20px;
+              }
+              
+              #result p {
+                  color: #333;
+                  font-size: 18px;
+              }
+              
+              #score {
+                  color: #38ef7d;
+                  font-weight: bold;
+                  font-size: 28px;
+              }
+          </style>              
     </header>
     
     <body>
         <div id="quiz-container">
             <h1 id="question"></h1>
             <div id="answers"></div>
-            <button id="next-button">Nächste Frage</button>    
+            <button id="next-button" onclick="nextQuestion()">Nächste Frage</button>    
+        </div>    
+        
+        <div id="result" hidden="true">
+            <h1>Quiz beendet!</h1>
+            <p>Deine Punktzahl:<span id="score"></span></p>  
+
         </div>    
     </body>
         
